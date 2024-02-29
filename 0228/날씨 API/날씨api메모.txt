@@ -1,0 +1,64 @@
+날씨 API 사이트
+http://openweathermap.org/
+
+sign in 회원가입
+
+API key 탭을 눌러서 키 값을 복사한다
+32cc72d5b74eb1160b5b6c35471f02e9
+
+Guide 메뉴 하단에 how to start 를 클릭한다
+
+Example on how to make an API call using your API key 밑에 사용방법
+
+http://api.openweathermap.org/data/2.5/forecast?id=524901&appid={32cc72d5b74eb1160b5b6c35471f02e9
+}
+Id 뒤에 있는 숫자코드는 도시코드입니다.
+적용하려는 도시코드를 얻어와야함
+서울 – 하남
+메인화면 – 돋보기(검색창) – wheather in your city placeholder로 써진부분에
+
+Hanam 이라고 검색
+검색된 hanam을 클릭
+날씨 정보가 나옵니다.
+상단 주소표시줄 맨 끝에 숫자가 도시코드
+하남의 도시코드는 1897007
+서울의 도시코드는 1835848
+http://api.openweathermap.org/data/2.5/forecast?id=1897007&appid=32cc72d5b74eb1160b5b6c35471f02e9
+
+나오는 온도는 캘빈 온도라서 우리가 쓰는 온도로 하려면 -273.15를 뺴줘야 한다
+
+json viewer 설치하면 코드를 예쁘게 볼 수 있음
+
+html , css , json //사이트정리
+https://tools.arantius.com/tabifier 
+
+var array = [1,2,3,4]
+
+array[0] = 1
+
+var array1 = [{temp.value,temp_min:value},{temp:value,temp_min.value}]
+출력되서 나온 온도는 kelvin 온도입니다
+279.23
+
+메뉴 – api – parameters of API reponse – json – Units of measurement
+찾기 ctrl + f(Units of measurement)검색
+
+기본 kelvin
+&units=metric 뒤에 붙인다.(섭씨)
+&units=imperial (화씨)
+
+http://api.openweathermap.org/data/2.5/weather?id=1897007&appid=32cc72d5b74eb1160b5b6c35471f02e9&units=metric
+	브라우저 주소창에 붙이면 섭씨로 온도가 변경된다
+forecast(예보)
+
+weather(현재날씨)
+
+
+https://openweathermap.org/weather-conditions 
+
+날씨 아이콘
+
+How to get icon URL
+For code 500 - light rain icon = "10d". See below a full list of codes
+URL is https://openweathermap.org/img/wn/10d@2x.png
+
